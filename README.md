@@ -1,5 +1,5 @@
 # Sistema de funcionários (java)
-projeto simples em java utilizando Progamação orientada a objetos.
+projeto simples em java utilizando Programação orientada a objetos.
 ## Funcionalidades
 - Cadastro de funcionários (model1.Gerente e model1.Vendedor)
 - Listagem de funcionários
