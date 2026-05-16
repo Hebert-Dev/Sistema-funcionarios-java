@@ -1,6 +1,6 @@
 package model1;
 
-public class Funcionario {
+public abstract class Funcionario {
 
 
     private String name;
@@ -8,9 +8,7 @@ public class Funcionario {
     private String password;
     private double salarioBase;
 
-    public String exibirDetalhes() {
-        return ("");
-    }
+    public abstract String exibirDetalhes();
 
     public double getSalarioBase() {
         return salarioBase;
@@ -44,7 +42,5 @@ public class Funcionario {
         this.password = password;
     }
 
-    public double calcularSalario() {
-        return 0;
-    }
+    public abstract double calcularSalario();
 }

@@ -1,7 +1,7 @@
 package model1;
 
 public class Gerente extends Funcionario {
-
+@Override
     public String exibirDetalhes() {
         return "Bonus " + bonus;
     }
@@ -15,7 +15,7 @@ public class Gerente extends Funcionario {
     public void setBonus(double bonus) {
         this.bonus = bonus;
     }
-
+@Override
     public double calcularSalario() {
     return (getSalarioBase() + getBonus());
 

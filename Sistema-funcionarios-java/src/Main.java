@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    static void main() {
+    public static void main(String[] args) {
         ArrayList<Funcionario> lista = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
 
@@ -70,6 +70,7 @@ public class Main {
                     System.out.println("Saindo....");
                     return;
                    }
+
                 }
             }
         }

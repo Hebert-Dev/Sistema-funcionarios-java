@@ -1,7 +1,7 @@
 package model1;
 
 public class Vendedor extends Funcionario {
-
+@Override
     public String exibirDetalhes() {
         return "comission " + comission;
     }
@@ -15,7 +15,7 @@ public class Vendedor extends Funcionario {
     public void setComission(double comission) {
         this.comission = comission;
     }
-
+@Override
     public double calcularSalario() {
         return (getSalarioBase() + getComission());
     }
