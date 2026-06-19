@@ -34,8 +34,10 @@ public class Main {
                     System.out.println("Digite um salário");
                     vendedor.setSalarioBase(sc.nextDouble());
                     System.out.println("Digite a Comissão");
-                    vendedor.setComission(sc.nextDouble());
+                    vendedor.setAdicional(sc.nextDouble());
                     lista.add(vendedor);
+                    FuncionarioDAO dao = new FuncionarioDAO();
+                    dao.salvar(vendedor);
                 }
                 case 2 -> {
                     Gerente gerente = new Gerente();
@@ -49,33 +51,22 @@ public class Main {
                     System.out.println("Digite um salário");
                     gerente.setSalarioBase(sc.nextDouble());
                     System.out.println("Digite a Bonificação:");
-                    gerente.setBonus(sc.nextDouble());
+                    gerente.setAdicional(sc.nextDouble());
                     lista.add(gerente);
+                    FuncionarioDAO dao = new FuncionarioDAO();
+                    dao.salvar(gerente);
                 }
                 case 3 -> {
-                    for (Funcionario f : lista) {
-                        System.out.println("-------");
-                        System.out.println(f.getClass().getSimpleName());
-                        System.out.println("nome: " + f.getName());
-                        System.out.println("login: " + f.getLogin());
-                        System.out.println("senha: " + f.getPassword());
-                        System.out.println("salario base: " + f.getSalarioBase());
-                        System.out.println("Adicional: " + f.exibirDetalhes());
-                        System.out.println("total: " + f.calcularSalario());
-
-
-                    }
+                    FuncionarioDAO dao = new FuncionarioDAO();
+                    dao.listar();
                 }
+
                 case 4 -> {
                     System.out.println("Saindo....");
                     return;
-                   }
-
                 }
+
             }
         }
     }
-
-
-
-
+}

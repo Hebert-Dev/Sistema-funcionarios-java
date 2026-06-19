@@ -2,13 +2,30 @@ package model1;
 
 public abstract class Funcionario {
 
-
     private String name;
     private String login;
     private String password;
     private double salarioBase;
+    private double adicional;
+    private CalculoSalarioStrategy estrategia;
 
     public abstract String exibirDetalhes();
+
+    public double calcularSalario() {
+        return estrategia.calcular(salarioBase, adicional);
+    }
+
+    public void setEstrategia(CalculoSalarioStrategy estrategia) {
+        this.estrategia = estrategia;
+    }
+
+    public double getAdicional() {
+        return adicional;
+    }
+
+    public void setAdicional(double adicional) {
+        this.adicional = adicional;
+    }
 
     public double getSalarioBase() {
         return salarioBase;
@@ -41,6 +58,4 @@ public abstract class Funcionario {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public abstract double calcularSalario();
 }
